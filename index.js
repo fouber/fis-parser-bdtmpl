@@ -9,5 +9,6 @@ var bdtmpl = require('baidutemplate').template;
 
 module.exports = function(content, file, conf){
     fis.util.map(conf, bdtmpl, true);
-    return bdtmpl(content).toString().replace(/^function anonymous/, 'function');
+    content = bdtmpl._compile(content).toString().replace(/^function anonymous/, 'function');
+    return '[' + content + '][0]';
 };
