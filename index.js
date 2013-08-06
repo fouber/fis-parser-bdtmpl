@@ -5,7 +5,7 @@
 
 'use strict';
 
-var bdtmpl = require('baidutemplate').template;
+var bdtmpl = require('baidutemplate-x').template;
 
 module.exports = function(content, file, conf){
     fis.util.map(conf, bdtmpl, true);
